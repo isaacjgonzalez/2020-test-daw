@@ -1,0 +1,153 @@
+div.espacio3D {
+  width: 300px;
+  height: 300px;
+  margin: 0; /* 3em auto 0 auto; */
+  /* border: 1px solid rgba(0,255,0,0.8); */
+  position: relative;
+  /* top: 60px; */
+  perspective-origin: center -30%;
+  perspective: 1000px;
+  transform: scale(0.4);
+}
+div.cubo3D {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(-150px);
+  animation-name: gira;
+  animation-duration: 30s;
+  animation-iteration-count: infinite;
+}
+
+/* div.base {
+  position: absolute;
+  border-radius: 15%;
+  width: 150px;
+  height: 150px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: translateX(75px) translateY(75px) rotateX(90deg) translateZ(-175px);
+  box-shadow: 0 0 50px 100px rgba(0,0,0,0.5);
+} */
+aside.cara {
+  position: absolute;
+  /* width: 298px;
+  height: 298px;
+  background-color: rgba(255,150,150,0.15);
+  border: 1px solid rgba(255,150,0,0.75); 
+  color: #08f;
+  font-size: 3em;
+  text-align: center;
+  line-height: 298px;
+  box-shadow: 0px 0px 5px rgba(77, 76, 75, 0.75); */
+}
+aside img{
+    width: 298px;
+    height: 298px;
+    border-radius: 15%;
+}
+
+/*** Modificamos la posición de cada cara para visualizarlas como queramos: ***/
+
+/*** Disposición de cubo ***/
+/*   aside.cara1 { /* Frente *//*
+  transform: translateZ(150px);
+}/*
+
+aside.cara2 { /* Atrás *//*
+  transform: rotateY(180deg) translateZ(150px);
+}
+
+aside.cara3 { /* Izquierda *//*
+  transform: rotateY(-90deg) translateZ(150px);
+}
+
+aside.cara4 { /* derecha *//*
+  transform: rotateY(90deg) translateZ(150px);
+}
+
+aside.cara5 { /* abajo *//*
+  transform: rotateX(-90deg) translateZ(150px);
+}
+
+aside.cara6 { /* arriba *//*
+  transform: rotateX(90deg) translateZ(150px);
+}
+*/
+
+/*** Disposición de polihedro ***/
+aside.cara1 { /* Frente */
+  transform: translateZ(500px);
+}  
+aside.cara2 { /* Atrás */
+  transform: rotatey(36deg) translatez(500px);
+}
+aside.cara3 { /* Izquierda */
+  transform: rotateY(72deg) translatez(500px);
+}  
+aside.cara4 { /* derecha */
+  transform: rotateY(108deg) translatez(500px);
+}  
+aside.cara5 { /* abajo */
+  transform: rotateY(144deg) translatez(500px);
+}  
+aside.cara6 { /* arriba */
+  transform: rotatey(180deg) translatez(500px);
+}  
+aside.cara7 { /* arriba */
+  transform: rotatey(216deg) translatez(500px);
+}
+aside.cara8 { /* arriba */
+  transform: rotatey(252deg) translatez(500px);
+}
+aside.cara9 { /* arriba */
+  transform: rotatey(288deg) translatez(500px);
+}
+aside.cara10 { /* arriba */
+  transform: rotatey(324deg) translatez(500px);
+}
+
+
+
+@keyframes gira {
+  0% {
+    transform: translateZ(-150px) rotateY(0deg);
+  }
+  10% {
+    transform: translateZ(-150px) rotateY(-36deg);
+  }
+  20% {
+    transform: translateZ(-150px) rotatey(-72deg);
+  }
+  30% {
+    transform: translateZ(-150px) rotateY(-108deg);
+  }
+  40% {
+      transform: translateZ(-150px) rotateY(-144deg);
+  }
+  50% {
+      transform: translateZ(-150px) rotateY(-180deg);
+  }
+  60% {
+      transform: translateZ(-150px) rotateY(-216deg);
+  }
+  70% {
+      transform: translateZ(-150px) rotateY(-252deg);
+  }
+  80% {
+      transform: translateZ(-150px) rotateY(-288deg);
+  }
+  90% {
+    transform: translateZ(-150px) rotateY(-324deg);
+  }
+  100% {
+      transform: translateZ(-150px) rotateY(-720deg);
+  }
+}
+
+@media screen and (max-width: 660px){
+  div.espacio3D {
+    transform: scale(0.3);
+  }
+  
+}
