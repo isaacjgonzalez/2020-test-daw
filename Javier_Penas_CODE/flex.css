@@ -1,0 +1,48 @@
+#contenedor{
+
+	font-family: Verdana;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+header, footer{
+	border: 1px solid black;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 5em;
+	
+}
+
+main{
+	border: 1px solid black;
+	width: 70%;
+	background-color: pink;
+}
+aside{
+	border: 1px solid black;
+	width: 30%;
+	background-color: grey;
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+		background-color: red;
+	
+}
+
+#centro{
+	display: flex;
+	flex-direction: row;
+}
+
+@media screen and (max-width: 700px){
+	aside{
+		display: none;
+	}
+	main{
+		width: 100%;
+	}
+}
