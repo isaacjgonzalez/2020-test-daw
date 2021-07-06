@@ -1,0 +1,195 @@
+body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url(../imagenes/IMG_5732.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* display: flex;
+  flex-direction: column; */
+}
+.divisor{
+  background-color: rgba(28, 95, 95, 0.7);
+  color: white;
+  font-size: 3rem;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+a{
+  padding-top: 16px;
+}
+/*** Menú navegación ***/
+#nav_continent{
+  display: none;
+}
+@media screen and (max-width: 660px){
+  #nav_continent{
+    display: flex;
+  }
+}
+#navegador #nav_inicio{
+  background-color: rgba(67, 90, 97,1);
+  color: ivory;
+}
+
+/*** Foto de entrada ***/
+header{
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+.foto_cabecera {
+  background-image: url(../imagenes/Lugo.jpg);
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.texto_cabecera {
+  width: 25%;
+  height: 200px;
+  margin-left: 60%;
+  margin-top: 25%;
+  padding: 10px 25px;
+  text-align: center;
+  background-color: rgba(28, 95, 95, 0.7);
+  color: rgba(62, 173, 136, 1.2);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border: 2px solid violet;
+}
+h1{
+  position: relative;
+  margin-top: 5px;
+  margin-bottom: -30px;
+  font-size: 3.1rem;
+  z-index: 15;
+}
+h3{
+  margin-top: -10px;
+  margin-bottom: 0;
+}
+span{
+  position: relative;
+  color: white;
+  font-size: 1.9em;
+  z-index: 5;
+}
+.detalle{
+    z-index: 15;
+    font-family: 'Courier New', Courier, monospace;
+}
+#flecha{
+  font-size: 5rem;
+  font-weight: bold;
+  color: rgba(61, 196, 196, 0.9);
+  text-align: right;
+  padding-right: 14%;
+  animation: parpadeo .5s infinite alternate linear;
+  animation-timing-function: cubic-bezier();
+
+}
+@keyframes parpadeo{
+  0% {opacity: 100%;transform: translateY(0);}
+  50% {opacity: 90%;transform: translateY(8px);}
+  100% {opacity: 100%;transform: translateY(24px);}
+}
+
+/*** Burger menu ***/
+#nav{
+  position: fixed;
+  top: 30px;
+  width: 30px;
+  height: 50px;
+  left: 50px;
+  z-index: 2;
+  font-family: 'Courier New', Courier, monospace;
+}
+#burger{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  transition: all ease-in 1s;
+  /* background-color: rgba(128, 128, 128,.7); */
+}
+.line{
+  width: 30px;
+  height: 5px;
+  background-color: rgba(61, 196, 196, 0.9);
+  border-radius: 20%;
+}
+#menu{
+  position:relative;
+  width: 300px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  background-color: rgba(128, 128, 128,.7);
+  left: -400px;
+  /* display: none; */
+  transition: all ease-in 1s;
+}
+#menu a{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 33%;
+  vertical-align: middle;
+  padding-top: 22%;
+}
+#flecha_menu{
+  display: none;
+  color: aquamarine;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+#nav:hover #menu{
+  left: -50px;
+}
+#nav:hover #burger{
+  transform: rotate(-360deg);
+}
+#menu a:hover{
+  background-color: rgba(28, 95, 95, 0.7);
+}
+
+/*** Cuerpo ***/
+#engloba{
+  background-image: url('../imagenes/All_Star.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.espacio{
+  height: 500px;
+  background-color: cornflowerblue;
+  opacity: 19%;
+}
+
+/*** Parte responsive ***/
+@media screen and (max-width: 660px){
+  body{
+    background-position-x: 60%;
+    background-position-y: 60%;
+  }
+  
+}
